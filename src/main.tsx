@@ -7,7 +7,7 @@ import "./index.css";
 createRoot(document.getElementById("root")!).render(
   <BrowserRouter>
     <AuthProvider isAuthProp={false}>
-      <App />,
+      <App />
     </AuthProvider>
   </BrowserRouter>
 );
