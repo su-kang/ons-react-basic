@@ -7,7 +7,7 @@ import viteLogo from '/vite.svg';
 const ComponentEx = () => {
 	return (
 		<div>
-			<h2>Component Test</h2>
+			<h2 style={{ color: 'gray' }}>Component Test</h2>
 			<div className="box">
 				<IconImage href="https://vite.dev" svgName={viteLogo} cName="logo" altName="Vite logo"></IconImage>
 				<IconImage href="https://react.dev" svgName={reactLogo} cName="logo react" altName="React logo"></IconImage>
