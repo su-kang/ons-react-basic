@@ -8,8 +8,6 @@ const Home = () => {
 	return (
 		<>
 			<div>
-				{/* <IconImage href="https://vite.dev" svgName={viteLogo} cName="logo" altName="Vite logo"></IconImage>
-				<IconImage href="https://react.dev" svgName={reactLogo} cName="logo react" altName="React logo"></IconImage> */}
 				<a href="https://vite.dev" target="_blank">
 					<img src={viteLogo} className="logo" alt="Vite logo" />
 				</a>

@@ -1,15 +1,8 @@
 import { forwardRef, useEffect, useImperativeHandle, useRef, useState } from 'react';
-import { useAuth } from '../components/AuthContext';
+import { useAuth } from '../components/AuthContextProvider';
 
 const ReactHook = () => {
 	const handlerRef = useRef<HTMLFormElement>(null);
-
-	useEffect(() => {
-		console.log('>> ReactHook Mount');
-		return () => {
-			console.log('>> ReactHook Unmount');
-		};
-	}, []);
 
 	const onClickChildEvent = () => {
 		handlerRef.current?.addNumber();
@@ -47,10 +40,14 @@ const SateComponent = () => {
 	const [value, setValue] = useState(0);
 
 	useEffect(() => {
+		console.log('>> ReactHook mount', value);
+	}, []);
+
+	useEffect(() => {
 		console.log('>> ReactHook value update', value);
 		// 초기화
 		// return () => {
-		// 	console.log('>> ReactHook value clear');
+		// 	console.log('>> ReactHook unmounte');
 		// };
 	}, [value]);
 
